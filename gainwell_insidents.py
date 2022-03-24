@@ -4,7 +4,7 @@ import random
 import os
 
 pool = cycle(['I', 'E', 'R', 'C'])
-number_of_lines = 20
+number_of_lines = 500000
 path = 'D://Work//CKM//files'
 os.chdir(path)
 
@@ -19,7 +19,7 @@ with open('PERFORMANCE_TestPenrollIcPrIncident_18838_WI_T_PR_APPLN_20210101-2021
 
     DTE_RECEIVED = '20210101'
     DTE_FINALIZED = '20210101'
-    CDE_PROV_TYPE = (i for i in range(500000))
+    CDE_PROV_TYPE = (i for i in range(number_of_lines))
     CDE_ENROLL_TYPE = (i for i in pool)
 
     for line in range(number_of_lines):
@@ -31,7 +31,7 @@ with open('PERFORMANCE_TestPenrollIcPrIncident_18838_WI_T_PR_APPLN_20210101-2021
 with open('PERFORMANCE_TestPenrollIcPrIncident_18838_WI_T_PR_TYPE_CDE_20210101-20211019.psv', 'w') as f:
     f.write('CDE_PROV_TYPE|DSC_PROV_TYPE')
 
-    CDE_PROV_TYPE = (i for i in range(500000))
+    CDE_PROV_TYPE = (i for i in range(number_of_lines))
 
     for line in range(number_of_lines):
         DSC_PROV_TYPE = generate_random_string(15)
