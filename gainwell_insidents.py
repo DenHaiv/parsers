@@ -1,9 +1,12 @@
 from itertools import cycle
 import string
 import random
+import os
 
 pool = cycle(['I', 'E', 'R', 'C'])
-number_of_lines = 10
+number_of_lines = 20
+path = 'D://Work//CKM//files'
+os.chdir(path)
 
 def generate_random_string(length):
     """Функция для случайной строки"""
